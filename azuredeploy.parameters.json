@@ -6,7 +6,7 @@
             "value": "https://connectorprod.blob.core.windows.net/bot-packages/csharp-abs-webapp_qnabot_precompiled.zip"
         },
         "botId": {
-            "value": "nitinpbot"
+            "value": "nitinpokhbot"
         },
         "location": {
             "value": "Central US"
