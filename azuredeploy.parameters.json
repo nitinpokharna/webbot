@@ -48,7 +48,7 @@
             "value": false
         },
         "serverFarmId": {
-            "value": "/subscriptions/7baa9f2b-0857-4063-a952-a2ff81a3fc80/resourceGroups/KOAzureRG/providers/Microsoft.Web/serverfarms/AppServicePlan-kowebapp"
+            "value": "/subscriptions/7baa9f2b-0857-4063-a952-a2ff81a3fc80/resourceGroups/KOAzureRG/providers/Microsoft.Web/serverfarms/AppServicePlan-nitinpoqna"
         },
         "serverFarmLocation": {
             "value": "West India"
