@@ -1,0 +1,60 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "zipUrl": {
+            "value": "https://connectorprod.blob.core.windows.net/bot-packages/csharp-abs-webapp_qnabot_precompiled.zip"
+        },
+        "botId": {
+            "value": "nitinpbot"
+        },
+        "location": {
+            "value": "Central US"
+        },
+        "kind": {
+            "value": "sdk"
+        },
+        "sku": {
+            "value": "S1"
+        },
+        "siteName": {
+            "value": "nitinpokhbot"
+        },
+        "appId": {
+            "value": "aa715c94-5007-4ce5-b7b8-3709dbb147c3"
+        },
+        "appSecret": {
+            "value": "/;IdyoGtAs*0eqGP"
+        },
+        "createNewStorage": {
+            "value": true
+        },
+        "storageAccountName": {
+            "value": "nitinpbotbdfeffd"
+        },
+        "storageAccountResourceId": {
+            "value": ""
+        },
+        "botEnv": {
+            "value": "prod"
+        },
+        "useAppInsights": {
+            "value": true
+        },
+        "appInsightsLocation": {
+            "value": "East US"
+        },
+        "createServerFarm": {
+            "value": false
+        },
+        "serverFarmId": {
+            "value": "/subscriptions/7baa9f2b-0857-4063-a952-a2ff81a3fc80/resourceGroups/KOAzureRG/providers/Microsoft.Web/serverfarms/AppServicePlan-kowebapp"
+        },
+        "serverFarmLocation": {
+            "value": "West India"
+        },
+        "azureWebJobsBotFrameworkDirectLineSecret": {
+            "value": ""
+        }
+    }
+}
