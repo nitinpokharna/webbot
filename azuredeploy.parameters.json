@@ -6,7 +6,7 @@
             "value": "https://connectorprod.blob.core.windows.net/bot-packages/csharp-abs-webapp_qnabot_precompiled.zip"
         },
         "botId": {
-            "value": "nitinpbot"
+            "value": "nitinpokhabot"
         },
         "location": {
             "value": "Central US"
@@ -48,7 +48,7 @@
             "value": false
         },
         "serverFarmId": {
-            "value": "/subscriptions/7baa9f2b-0857-4063-a952-a2ff81a3fc80/resourceGroups/nitindemo/providers/Microsoft.Web/nitinpokharnaserv"
+            "value": "/subscriptions/7baa9f2b-0857-4063-a952-a2ff81a3fc80/resourceGroups/nitindem/providers/Microsoft.Web/nitinpokharnaserv"
         },
         "serverFarmLocation": {
             "value": "West India"
