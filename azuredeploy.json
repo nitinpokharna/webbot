@@ -191,7 +191,7 @@
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/', parameters('storageAccountName'))]"
             ],
-            "properties": {
+              "properties": {
                 "name": "[parameters('siteName')]",
                 "serverFarmId": "[parameters('serverFarmId')]",
                 "siteConfig": {
@@ -235,6 +235,30 @@
                         {
                             "name": "UseTableStorageForConversationState",
                             "value": "true"
+                        },
+                        {
+                            "name": "BotDevAppInsightsKey",
+                            "value": "[reference(resourceId('microsoft.insights/components/', variables('insightsName')), '2015-05-01').InstrumentationKey]"
+                        },
+                        {
+                            "name": "BotDevAppInsightsName",
+                            "value": "[variables('insightsName')]"
+                        },
+                        {
+                            "name": "BotDevAppInsightsAppId",
+                            "value": "[reference(resourceId('microsoft.insights/components/', variables('insightsName')), '2015-05-01').AppId]"
+                        },
+                        {
+                            "name": "QnAKnowledgebaseId",
+                            "value": ""
+                        },
+                        {
+                            "name": "QnAAuthKey",
+                            "value": ""
+                        },
+                        {
+                            "name": "QnAEndpointHostName",
+                            "value": ""
                         }
                     ],
                     "cors": {
