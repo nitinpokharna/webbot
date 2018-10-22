@@ -12,7 +12,7 @@
   - name: Creating webapp bot
     azure_rm_deployment:
         state: present
-        resource_group_name: 'nitindemo'
+        resource_group_name: 'nitindem'
         # location seems to be not optional
         location: 'West US'
         template_link: '{{ templateLink }}'
