@@ -1,0 +1,33 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "name": {
+            "value": "nitinqna"
+        },
+        "appName": {
+            "value": "nitinqnaq"
+        },
+        "location": {
+            "value": "westus"
+        },
+        "location2": {
+            "value": "eastus"
+        },
+        "location3": {
+            "value": "centralus"
+        },
+        "location4": {
+            "value": "westus"
+        },
+        "sku": {
+            "value": "F0"
+        },
+        "sku2": {
+            "value": "free"
+        },
+        "searchHostingMode": {
+            "value": "Default"
+        }
+    }
+}
