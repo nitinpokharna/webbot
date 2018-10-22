@@ -18,7 +18,7 @@
             "value": "S1"
         },
         "siteName": {
-            "value": "nitinpbot"
+            "value": "nitinpokhabot"
         },
         "appId": {
             "value": "aa715c94-5007-4ce5-b7b8-3709dbb147c3"
@@ -30,7 +30,7 @@
             "value": true
         },
         "storageAccountName": {
-            "value": "nitinpbotbdfe"
+            "value": "nitinpokhabotbdfe"
         },
         "storageAccountResourceId": {
             "value": ""
@@ -48,7 +48,7 @@
             "value": false
         },
         "serverFarmId": {
-            "value": "/subscriptions/7baa9f2b-0857-4063-a952-a2ff81a3fc80/resourceGroups/nitindem/providers/Microsoft.Web/serverfarms/AppServicePlan-nitinpokharna"
+            "value": "/subscriptions/7baa9f2b-0857-4063-a952-a2ff81a3fc80/resourceGroups/nitindem/providers/Microsoft.Web/serverfarms/AppServicePlan-nitinpokhabot"
         },
         "serverFarmLocation": {
             "value": "West India"
