@@ -5,10 +5,20 @@
   gather_facts: False
   vars:
     # Variables 'resgrp' and 'location' need to be provided at command line with arg --extra-vars
+    templatelink1: 'https://raw.githubusercontent.com/nitinpokharna/webbot/master/qna/azuredeploy.json'
+    paramslink1: 'https://raw.githubusercontent.com/nitinpokharna/webbot/master/qna/azuredeploy.parameters.json'
     templateLink: 'https://raw.githubusercontent.com/nitinpokharna/webbot/master/azuredeploy.json'
     paramsLink: 'https://raw.githubusercontent.com/nitinpokharna/webbot/master/azuredeploy.parameters.json'
    
   tasks:
+  - name: Creating QNA maker
+    azure_rm_deployment:
+        state: present
+        resource_group_name: 'nitindem'
+        location: 'West US'
+        template_link: '{{ templatelink1 }}'
+        parameters_link: '{{ paramslink1 }}'
+        
   - name: Creating webapp bot
     azure_rm_deployment:
         state: present
