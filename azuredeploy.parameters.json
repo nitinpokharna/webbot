@@ -47,6 +47,9 @@
         "createServerFarm": {
             "value": true
         },
+        "serverFarmId": {
+            "value": "/subscriptions/7baa9f2b-0857-4063-a952-a2ff81a3fc80/resourceGroups/nitindemo/providers/Microsoft.Web/serverfarms/nitinqnqq"
+        },
         "serverFarmLocation": {
             "value": "centralus"
         },
