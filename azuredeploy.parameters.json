@@ -3,34 +3,34 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "zipUrl": {
-            "value": "https://connectorprod.blob.core.windows.net/bot-packages/csharp-abs-webapp-v4_basic_precompiled.zip"
+            "value": "https://connectorprod.blob.core.windows.net/bot-packages/csharp-abs-webapp_qnabot_precompiled.zip"
         },
         "botId": {
-            "value": "nitinqnqq"
+            "value": "nitinpbot"
         },
         "location": {
-            "value": "West US"
+            "value": "Central US"
         },
         "kind": {
             "value": "sdk"
         },
         "sku": {
-            "value": "F0"
+            "value": "S1"
         },
         "siteName": {
-            "value": "nitinqnqq"
+            "value": "nitinpbot"
         },
         "appId": {
-            "value": "cd3b2269-5e08-4afe-bdbc-ea83703c7b3b"
+            "value": "aa715c94-5007-4ce5-b7b8-3709dbb147c3"
         },
         "appSecret": {
-            "value": "vC/FoAE@9rqCvH|l"
+            "value": "/;IdyoGtAs*0eqGP"
         },
         "createNewStorage": {
             "value": true
         },
         "storageAccountName": {
-            "value": "nitinqnqqa485"
+            "value": "nitinpbotbdfe"
         },
         "storageAccountResourceId": {
             "value": ""
@@ -45,19 +45,16 @@
             "value": "East US"
         },
         "createServerFarm": {
-            "value": true
+            "value": false
         },
         "serverFarmId": {
-            "value": "/subscriptions/7baa9f2b-0857-4063-a952-a2ff81a3fc80/resourceGroups/nitindemo/providers/Microsoft.Web/serverfarms/nitinpokhservice"
+            "value": "/subscriptions/7baa9f2b-0857-4063-a952-a2ff81a3fc80/resourceGroups/nitindemo/providers/Microsoft.Web/serverfarms/AppServicePlan-nitinapp"
         },
         "serverFarmLocation": {
-            "value": "centralus"
+            "value": "West India"
         },
         "azureWebJobsBotFrameworkDirectLineSecret": {
             "value": ""
-        },
-        "botFileEncryptionKey": {
-            "value": "gO8FuHoQ+3V6dYGP7CiH2FeOhDCy+ta9nOXKDWa24rI="
         }
     }
 }
