@@ -48,7 +48,7 @@
             "value": false
         },
         "serverFarmId": {
-            "value": "/subscriptions/7baa9f2b-0857-4063-a952-a2ff81a3fc80/resourceGroups/nitindem/providers/Microsoft.Web/serverfarms/AppServicePlan-nitinpokhabotfrm"
+            "value": "/subscriptions/7baa9f2b-0857-4063-a952-a2ff81a3fc80/resourceGroups/nitindem/providers/Microsoft.Web/serverfarms/app_serviceplan_nitinpokh"
         },
         "serverFarmLocation": {
             "value": "West India"
