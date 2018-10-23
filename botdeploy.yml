@@ -76,8 +76,8 @@
               value: '{{ var_kind }}'
           sku: 
               value: '{{ var_sku }}'
-          sitename: 
-              value: '{{ var_sitename }}'
+          siteName: 
+              value: '{{ var_siteName }}'
           appId: 
               value: '{{ var_appId }}'
           appSecret: 
