@@ -118,7 +118,7 @@
               value: '{{ var_azureWebJobsBotFrameworkDirectLineSecret }}'
         template_link: '{{ templateLink }}'
         
-  - name: Creating webapp bot
+  - name: Creating SQL Server and Database
     azure_rm_deployment:
         state: present
         resource_group_name: 'nitindem'
@@ -151,4 +151,4 @@
               value: '{{ var_enableATP }}'
           allowAzureIps:
               value: '{{ var_allowAzureIps }}'
-        template_link: '{{ templatelink2 }}'
+        template_link: '{{ templateLink2 }}'
