@@ -45,6 +45,8 @@
               value: '{{ var_name }}'
           appName:
               value: '{{ var_appName }}'
+          location:
+              value: '{{ var_location }}'
           location2: 
               value: '{{ var_location2 }}'
           location3: 
