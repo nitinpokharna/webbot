@@ -258,7 +258,7 @@
                         },
                         {
                             "name": "QnAEndpointHostName",
-                            "value": "[concat('https://',reference(resourceId('Microsoft.Web/sites', parameters('appName'))).hostNames[0])]"
+                            "value": ""
                         }
                     ],
                     "cors": {
