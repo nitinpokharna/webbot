@@ -43,6 +43,8 @@
         parameters:
           name: 
               value: '{{ var_name }}'
+          appName:
+              value: '{{ var_appName }}'
           location2: 
               value: '{{ var_location2 }}'
           location3: 
