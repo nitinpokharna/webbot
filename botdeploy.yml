@@ -6,24 +6,68 @@
   vars:
     # Variables 'resgrp' and 'location' need to be provided at command line with arg --extra-vars
     templatelink1: 'https://raw.githubusercontent.com/nitinpokharna/webbot/master/qna/azuredeploy.json'
-    paramslink1: 'https://raw.githubusercontent.com/nitinpokharna/webbot/master/qna/azuredeploy.parameters.json'
+    #paramslink1: 'https://raw.githubusercontent.com/nitinpokharna/webbot/master/qna/azuredeploy.parameters.json'
     templateLink: 'https://raw.githubusercontent.com/nitinpokharna/webbot/master/azuredeploy.json'
-    paramsLink: 'https://raw.githubusercontent.com/nitinpokharna/webbot/master/azuredeploy.parameters.json'
+    #paramsLink: 'https://raw.githubusercontent.com/nitinpokharna/webbot/master/azuredeploy.parameters.json'
+    var_zipUrl: "https://connectorprod.blob.core.windows.net/bot-packages/csharp-abs-webapp_qnabot_precompiled.zip"
+    var_botId: "nitinptestchatbot"
+    var_location: "West US"
+    var_kind: "sdk"
+    var_sku: "F0"
+    var_siteName: "nitinptestchatbot"
+    var_appId: "cd3b2269-5e08-4afe-bdbc-ea83703c7b3b"
+    var_appSecret: "vC/FoAE@9rqCvH|l"
+    var_createNewStorage: true
+    var_storageAccountName: "nitinptestchatbotad0f"
+    var_storageAccountResourceId: ""
+    var_botEnv: "prod"
+    var_useAppInsights: true
+    var_appInsightsLocation: "East US"
+    var_createServerFarm: true
+    var_serverFarmId: "/subscriptions/7baa9f2b-0857-4063-a952-a2ff81a3fc80/resourceGroups/nitindem/providers/Microsoft.Web/serverfarms/nitinapp"
+    var_serverFarmLocation: "West US"
+    var_azureWebJobsBotFrameworkDirectLineSecret: ""
+    var_name: "nitinqna"
+    var_appName: "nitinqnanq"
+    var_location2: "East US"
+    var_location3: "Central US"
+    var_location4: "West US"
+    var_sku2: "free"
+    var_searchHostingMode: "default"
    
   tasks:
   - name: Creating QNA maker
     azure_rm_deployment:
         state: present
         resource_group_name: 'nitindem'
-        location: 'West US'
+        name: '{{ var_name }}'
+        location2: '{{ var_loacation2 }}'
+        location3: '{{ var_loacation3 }}'
+        location4: '{{ var_loacation4 }}'
+        sku: '{{ var_sku }}'
+        sku2: '{{ var_sku2 }}'
+        searchHostingMode: '{{ var_searchHostingMode }}'
         template_link: '{{ templatelink1 }}'
-        parameters_link: '{{ paramslink1 }}'
         
   - name: Creating webapp bot
     azure_rm_deployment:
         state: present
         resource_group_name: 'nitindem'
-        # location seems to be not optional
-        location: 'West US'
+        zipUrl: '{{ var_zipUrl }}'
+        botId: '{{ var_botId }}'
+        location: '{{ var_location }}'
+        kind: '{{ var_kind }}'
+        sku: '{{ var_sku }}'
+        sitename: '{{ var_sitename }}'
+        appId: '{{ var_appId }}'
+        appSecret: '{{var_appSecret }}'
+        createNewStorage: '{{ var_createNewStorage }}'
+        storageAccountName: '{{ var_storageAccountName }}'
+        storageAccountResourceId: '{{ var_storageAccountResourceId }}'
+        botEnv: '{{ var_botEnv}}'
+        useAppInsights: '{{ var_useAppInsights }}'
+        createServerFarm: '{{ var_createServerFarm }}'
+        serverFarmId: '{{ var_serverFarmId }}'
+        serverFarmLocation: '{{ var_serverFarmLocation }}'
+        azureWebJobsBotFrameworkDirectLineSecret: '{{ var_azureWebJobsBotFrameworkDirectLineSecret }}'
         template_link: '{{ templateLink }}'
-        parameters_link: '{{ paramsLink }}'
