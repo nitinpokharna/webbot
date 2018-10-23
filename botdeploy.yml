@@ -9,6 +9,7 @@
     #paramslink1: 'https://raw.githubusercontent.com/nitinpokharna/webbot/master/qna/azuredeploy.parameters.json'
     templateLink: 'https://raw.githubusercontent.com/nitinpokharna/webbot/master/azuredeploy.json'
     #paramsLink: 'https://raw.githubusercontent.com/nitinpokharna/webbot/master/azuredeploy.parameters.json'
+    templateLink2: 'https://raw.githubusercontent.com/nitinpokharna/webbot/master/sql/azuredeploy.json'
     var_zipUrl: "https://connectorprod.blob.core.windows.net/bot-packages/csharp-abs-webapp_qnabot_precompiled.zip"
     var_botId: "nitinptestchatbot"
     var_location: "West US"
@@ -34,6 +35,19 @@
     var_location4: "West US"
     var_sku2: "free"
     var_searchHostingMode: "default"
+    var_administratorLogin: "eyadmin"
+    var_administratorLoginPassword: "Password12345!"
+    var_collation: "SQL_Latin1_General_CP1_CI_AS"
+    var_databaseName: "Ey_db"
+    var_tier: "standard"
+    var_skuName: "S0"
+    var_maxSizeBytes: 268435456000
+    var_sampleName: ""
+    var_serverName: "eydb"
+    var_zoneRedundant: false
+    var_licenseType: ""
+    var_enableATP: false
+    var_allowAzureIps: true
    
   tasks:
   - name: Creating QNA maker
@@ -103,3 +117,38 @@
           azureWebJobsBotFrameworkDirectLineSecret: 
               value: '{{ var_azureWebJobsBotFrameworkDirectLineSecret }}'
         template_link: '{{ templateLink }}'
+        
+  - name: Creating webapp bot
+    azure_rm_deployment:
+        state: present
+        resource_group_name: 'nitindem'
+        parameters:
+          administratorLogin:
+              value: '{{ var_administratorLogin }}' 
+          administratorLoginPassword:
+              value: '{{ var_administratorLoginPassword }}'
+          collation:
+              value: '{{ var_collation }}'
+          databaseName:
+              value: '{{ var_databaseName }}'
+          tier:
+              value: '{{ var_tier }}'
+          skuName:
+              value: '{{ var_skuName }}'
+          location:
+              value: '{{ var_location }}'
+          maxSizeBytes:
+              value: '{{ var_maxSizeBytes }}'
+          sampleName:
+              value: '{{ var_sampleName }}'
+          serverName:
+              value: '{{ var_serverName }}'
+          zoneRedundant:
+              value: '{{ var_zoneRedundant }}'
+          licenseType:
+              value: '{{ var_licenseType }}'
+          enableATP:
+              value: '{{ var_enableATP }}'
+          allowAzureIps:
+              value: '{{ var_allowAzureIps }}'
+        template_link: '{{ templatelink2 }}'
