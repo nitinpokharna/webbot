@@ -100,6 +100,8 @@
               value: '{{ var_serverFarmId }}'
           serverFarmLocation: 
               value: '{{ var_serverFarmLocation }}'
+          appName: 
+              value: '{{ var_appName }}'
           azureWebJobsBotFrameworkDirectLineSecret: 
               value: '{{ var_azureWebJobsBotFrameworkDirectLineSecret }}'
         template_link: '{{ templateLink }}'
