@@ -40,34 +40,60 @@
     azure_rm_deployment:
         state: present
         resource_group_name: 'nitindem'
-        name: '{{ var_name }}'
-        location2: '{{ var_location2 }}'
-        location3: '{{ var_location3 }}'
-        location4: '{{ var_location4 }}'
-        sku: '{{ var_sku }}'
-        sku2: '{{ var_sku2 }}'
-        searchHostingMode: '{{ var_searchHostingMode }}'
+        parameters:
+          name: 
+              value: '{{ var_name }}'
+          location2: 
+              value: '{{ var_location2 }}'
+          location3: 
+              value: '{{ var_location3 }}'
+          location4: 
+              value: '{{ var_location4 }}'
+          sku: 
+              value: '{{ var_sku }}'
+          sku2: 
+              value: '{{ var_sku2 }}'
+          searchHostingMode: 
+              value: '{{ var_searchHostingMode }}'
         template_link: '{{ templatelink1 }}'
         
   - name: Creating webapp bot
     azure_rm_deployment:
         state: present
         resource_group_name: 'nitindem'
-        zipUrl: '{{ var_zipUrl }}'
-        botId: '{{ var_botId }}'
-        location: '{{ var_location }}'
-        kind: '{{ var_kind }}'
-        sku: '{{ var_sku }}'
-        sitename: '{{ var_sitename }}'
-        appId: '{{ var_appId }}'
-        appSecret: '{{var_appSecret }}'
-        createNewStorage: '{{ var_createNewStorage }}'
-        storageAccountName: '{{ var_storageAccountName }}'
-        storageAccountResourceId: '{{ var_storageAccountResourceId }}'
-        botEnv: '{{ var_botEnv}}'
-        useAppInsights: '{{ var_useAppInsights }}'
-        createServerFarm: '{{ var_createServerFarm }}'
-        serverFarmId: '{{ var_serverFarmId }}'
-        serverFarmLocation: '{{ var_serverFarmLocation }}'
-        azureWebJobsBotFrameworkDirectLineSecret: '{{ var_azureWebJobsBotFrameworkDirectLineSecret }}'
+        parameters:
+          zipUrl: 
+              value: '{{ var_zipUrl }}'
+          botId: 
+              value: '{{ var_botId }}'
+          location: 
+              value: '{{ var_location }}'
+          kind: 
+              value: '{{ var_kind }}'
+          sku: 
+              value: '{{ var_sku }}'
+          sitename: 
+              value: '{{ var_sitename }}'
+          appId: 
+              value: '{{ var_appId }}'
+          appSecret: 
+              value: '{{var_appSecret }}'
+          createNewStorage: 
+              value: '{{ var_createNewStorage }}'
+          storageAccountName: 
+              value: '{{ var_storageAccountName }}'
+          storageAccountResourceId: 
+              value: '{{ var_storageAccountResourceId }}'
+          botEnv: 
+              value: '{{ var_botEnv}}'
+          useAppInsights: 
+              value: '{{ var_useAppInsights }}'
+          createServerFarm: 
+              value: '{{ var_createServerFarm }}'
+          serverFarmId: 
+              value: '{{ var_serverFarmId }}'
+          serverFarmLocation: 
+              value: '{{ var_serverFarmLocation }}'
+          azureWebJobsBotFrameworkDirectLineSecret: 
+              value: '{{ var_azureWebJobsBotFrameworkDirectLineSecret }}'
         template_link: '{{ templateLink }}'
