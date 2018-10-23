@@ -92,6 +92,8 @@
               value: '{{ var_botEnv}}'
           useAppInsights: 
               value: '{{ var_useAppInsights }}'
+          appInsightsLocation:
+              value: '{{ var_appInsightsLocation }}'
           createServerFarm: 
               value: '{{ var_createServerFarm }}'
           serverFarmId: 
