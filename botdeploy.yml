@@ -41,9 +41,9 @@
         state: present
         resource_group_name: 'nitindem'
         name: '{{ var_name }}'
-        location2: '{{ var_loacation2 }}'
-        location3: '{{ var_loacation3 }}'
-        location4: '{{ var_loacation4 }}'
+        location2: '{{ var_location2 }}'
+        location3: '{{ var_location3 }}'
+        location4: '{{ var_location4 }}'
         sku: '{{ var_sku }}'
         sku2: '{{ var_sku2 }}'
         searchHostingMode: '{{ var_searchHostingMode }}'
