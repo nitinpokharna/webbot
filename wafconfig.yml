@@ -11,6 +11,13 @@
 
   tasks:
   
+  - name: "Azure login"
+    shell: >
+           az login --service-principal
+           -u "{{ AZURE_RM_CLIENTID | mandatory }}"
+           -p "{{ AZURE_RM_SECRET | mandatory }}"
+           --tenant "{{ AZURE_RM_TENANTID | mandatory }}"
+           
   - name: "collecting backend IP"
     shell: |
             az webapp config hostname get-external-ip --resource-group "{{ var_resource_group_name }}" --webapp-name "{{ var_websiteName }}"
