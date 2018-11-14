@@ -1,0 +1,23 @@
+---
+- name: CREATE ARM Deployment PLAYBOOK
+  hosts: localhost
+  connection: local
+  gather_facts: True
+  vars:
+    var_resource_group_name: "nitin"
+    var_websiteName: "nitin12345"
+    var_applicationGatewayName: "nitin"
+    
+
+  tasks:
+  
+  - name: "collecting backend IP"
+    shell: |
+            az webapp config hostname get-external-ip --resource-group "{{ var_resource_group_name }}" --webapp-name "{{ var_websiteName }}"
+            register: var_ip
+  
+  - name: "Configure Application Gateway"
+    shell: |
+             az network application-gateway address-pool create -g "{{ var_resource_group_name }}" --gateway-name "{{ var_applicationGatewayName }}" -n new --servers "{{var_ip}}"
+             az network application-gateway probe create -g "{{ var_resource_group_name }}" --gateway-name "{{ var_applicationGatewayName }}" --name  nitin2 --protocol http --host-name-from-http-settings true --path /
+             
