@@ -3,13 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "sqlAdministratorLogin": {
-      "type": "string",
+      "type": "string"
        },
     "sqlAdministratorLoginPassword": {
-      "type": "securestring",
+      "type": "securestring"
        },
     "transparentDataEncryption": {
-      "type": "string",
+      "type": "string"
       },
     "DeploymentID": {
       "type": "string"
@@ -20,7 +20,7 @@
     "sqlServerName": {
       "type" "string"
       },
-    "databaseName: {
+    "databaseName": {
       "type": "string"
      },
     "sampleName": {
