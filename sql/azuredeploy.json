@@ -24,7 +24,7 @@
       "type": "string"
      },
     "sampleName": {
-      "type": "string"
+      "type": "string",
       "defaultValue": ""
      },
      "licenseType": {
