@@ -11,43 +11,43 @@
     "transparentDataEncryption": {
       "type": "string",
       },
-	"DeploymentID": {
-		"type": "string"
-		},
+    "DeploymentID": {
+      "type": "string"
+      },
     "EngagementId": {
-        "type": "string"
-		},
+      "type": "string"
+      },
     "sqlServerName": {
-        "type" "string"
+      "type" "string"
       },
     "databaseName: {
       "type": "string"
      },
     "sampleName": {
-       "type": "string"
- 	   "defaultValue": ""
+      "type": "string"
+      "defaultValue": ""
      },
-   	"licenseType": {
+     "licenseType": {
        "type": "string",
-		"defaultValue": ""
-   	},
-   	"zoneRedundant": {
+       "defaultValue": ""
+     },
+     "zoneRedundant": {
         "type": "bool",
-		"defaultValue": false
-	},
-	"Owner": {
-		"type": "string"
-		},
+	"defaultValue": false
+     },
+     "Owner": {
+	"type": "string"
+     },
     "location": {
       "type": "string",
-   }
-  },
+     }
+     },
   "variables": {
     "databaseCollation": "SQL_Latin1_General_CP1_CI_AS"
   },
   "resources": [
     {
-      "name": "[variables('sqlServerName')]",
+      "name": "[parameters('sqlServerName')]",
       "type": "Microsoft.Sql/servers",
       "apiVersion": "2014-04-01-preview",
       "location": "[parameters('location')]",
@@ -64,7 +64,7 @@
       },
       "resources": [
         {
-          "name": "[variables('databaseName')]",
+          "name": "[parameters('databaseName')]",
           "type": "databases",
           "apiVersion": "2015-01-01",
           "location": "[parameters('location')]",
